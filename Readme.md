@@ -1,7 +1,7 @@
 # Личный проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Віталій Бондаренко](https://up.htmlacademy.ru/adaptive/16/user/178495).
-* Наставник: `Неизвестно`.
+* Наставник: `without mentor`.
 
 ---
 
