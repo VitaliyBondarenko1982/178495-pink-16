@@ -3,14 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="img/logotype-white-mobile.svg" width="67" height="38" alt="Логотип Pink">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <div class="page-header__container container">
+        <!--при отсутствии js остается установлен класс main-nav--nojs (меню в мобильной версии по умолчанию открыто, кнопки, работающие на js, скрыты) класс main-nav--nojs при наличии js будет удален классы main-nav--closed и main-nav--opened переключают состояние меню и внешний вид кнопки при наличии js-->
+      <div class="page-header__logo">
+        <a href="#">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active">
@@ -28,25 +33,28 @@
           </ul>
         </div>
       </nav>
+    </div>
     </header>
 
     <main>
       <section class="banner">
-        <div class="banner__image"></div>
+        <img class="banner__image" src="img/bg-back-mobile@1x.jpg" width="320" height="462" alt="Фоновое изображение">
         <h1 class="banner__text">Фотографии пользователей</h1>
       </section>
 
       <section class="slogan">
+        <div class="container">
         <h2 class="slogan__text">
           Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
         </h2>
+        </div>
       </section>
 
       <section class="main-photo">
         <div class="main-photo__wrapper">
           <div class="main-photo__item">
             <picture>
-              <img class="main-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="main-photo__image" src="img/panorama-mobile@1x.jpg" width="320" height="137" alt="Изображение Панорама">
             </picture>
             <div class="main-photo__legend">
               <p class="main-photo__author">Анна</p>
@@ -63,86 +71,86 @@
 
       <section class="another-photos">
         <div class="another-photos__wrapper">
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-car-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Левон</p>
-              <p class="another-photo__time-load">(<span>5</span>минут назад)</p>
-              <p class="another-photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Левон</p>
+              <p class="another-photos__time-load">(<span>5</span>минут назад)</p>
+              <p class="another-photos__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>356</span>
               </p>
             </div>
           </div>
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-drumset-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Антон</p>
-              <p class="another-photo__time-load">(<span>12</span>часов назад)</p>
-              <p class="another-photo__comment">Соседи будут рады!</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Антон</p>
+              <p class="another-photos__time-load">(<span>12</span>часов назад)</p>
+              <p class="another-photos__comment">Соседи будут рады!</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>666</span>
               </p>
             </div>
           </div>
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-window-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Борис</p>
-              <p class="another-photo__time-load">(<span>20</span>часов назад)</p>
-              <p class="another-photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Борис</p>
+              <p class="another-photos__time-load">(<span>20</span>часов назад)</p>
+              <p class="another-photos__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>215</span>
               </p>
             </div>
           </div>
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-fair-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Сергей</p>
-              <p class="another-photo__time-load">(<span>25</span>часов назад)</p>
-              <p class="another-photo__comment">Самая кубанская в мире!</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Сергей</p>
+              <p class="another-photos__time-load">(<span>25</span>часов назад)</p>
+              <p class="another-photos__comment">Самая кубанская в мире!</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>4</span>
               </p>
             </div>
           </div>
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-pov-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Максим</p>
-              <p class="another-photo__time-load">(<span>40</span>часов назад)</p>
-              <p class="another-photo__comment">Где снег-то?</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Максим</p>
+              <p class="another-photos__time-load">(<span>40</span>часов назад)</p>
+              <p class="another-photos__comment">Где снег-то?</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>150</span>
               </p>
             </div>
           </div>
-          <div class="another-photo__item">
+          <div class="another-photos__item">
             <picture>
-              <img class="another-photo__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
+              <img class="another-photos__image" src="img/photo-wing-mobile@1x.jpg" width="320" height="137" alt="Изображение">
             </picture>
-            <div class="another-photo__legend">
-              <p class="another-photo__author">Надежда</p>
-              <p class="another-photo__time-load">(<span>45</span>минут назад)</p>
-              <p class="another-photo__comment">Всем GM и взаимные лайки!</p>
-              <p class="another-photo__like">
-                <svg class="another-photo__icon-like" width="24" height="22"></svg>
+            <div class="another-photos__legend">
+              <p class="another-photos__author">Надежда</p>
+              <p class="another-photos__time-load">(<span>45</span>минут назад)</p>
+              <p class="another-photos__comment">Всем GM и взаимные лайки!</p>
+              <p class="another-photos__like">
+                <svg class="another-photos__icon-like" width="24" height="22"></svg>
                 Нравится:<span>2560</span>
               </p>
             </div>
@@ -154,19 +162,23 @@
         <div class="load__wrapper">
           <h2 class="load__title">Затмите их всех!</h2>
           <p class="load__description">Выкладывайте все, что накопилось в телефоне!</p>
-          <picture>
-            <img class="load__image" src="http://placehold.it/150x100" width="150" height="100" alt="Изображение">
-          </picture>
           <div class="load__setup">
+          <picture>
+            <img class="load__image" src="img/photo-road-mobile@1x.jpg" width="280" height="374" alt="Изображение дороги">
+          </picture>
             <div class="load__tools">
-              <svg class="loads__tools-icon" width="24" height="22"></svg>
-              <svg class="loads__tools-icon" width="24" height="22"></svg>
-              <svg class="loads__tools-icon" width="24" height="22"></svg>
+              <img class="loads__tools-icon loads__tools-icon--crop" src="img/icon-editor-crop.svg" width="49" height="49">
+              <img class="loads__tools-icon" src="img/icon-editor-contrast.svg" width="48" height="48">
+              <img class="loads__tools-icon" src="img/icon-editor-fill.svg" width="32" height="32">
             </div>
-            <div class="load__tools-scale">
-              <div class="load__scale">
-                <div class="load__toggle"></div>
-              </div>
+            <div class="load__scale">
+              <div class="load__toggle"></div>
+            </div>
+            <div class="load__post">
+              <a href="#">Запостить</a>
+            </div>
+            <div class="load__cansel">
+              <a href="#">Отмена</a>
             </div>
           </div>
         </div>
@@ -176,8 +188,8 @@
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
-        <div class="page-footer_logo">
-          <img src="http://placehold.it/150x100" width="150" height="100" alt="Логотип Pink">
+        <div class="page-footer__logo">
+          <img src="img/logo-pink-blue-mobile.svg" width="150" height="100" alt="Логотип Pink">
         </div>
         <div class="page-footer__social social">
             <ul class="social__list">
@@ -210,6 +222,6 @@
           </div>
       </div>
     </footer>
-
+<script src="js/menu.js"></script>
   </body>
 </html>
