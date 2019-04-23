@@ -1,38 +1,159 @@
 @import "../variables";
 
 .install {
-    background-color: #1d2631;
-    width: 320px;
-    margin: 0 auto;
-    color: #ffffff;
+  background: #1d2631;
+  padding: 28px 20px 32px;
+}
+
+.install__title {
+  display: none;
 }
 
 .install__button {
-  padding-top: 28px;
-}
-
-.install__button a {
-  text-decoration: none;
+  display: block;
+  width: 280px;
+  padding: 14px 0 17px 0;
+  text-align: center;
   color: #ffffff;
-  border: 3px solid #ffffff;
-  border-radius: 27px;
   font-size: 18px;
   line-height: 18px;
   font-weight: 700;
-  padding: 11px 35px 11px 35px;
+  cursor: pointer;
+  border-radius: 30px;
+  border: 3px solid #ffffff;
+  margin: 0 auto 30px;
 }
 
-.install__logo-list {
+.install__button:hover,
+.install__button:focus {
+  background-color: #ffffff;
+  color: @red;
+}
+
+.install__button:active {
+  background-color: #ffffff;
+  color: rgba(210, 40, 86, 0.3);
+}
+
+.install__list {
+  .list-default;
+  width: 206px;
+  margin: 0 auto;
   display: flex;
-  width: 280px;
-  list-style: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.install__logo-item {
-  width: 93px;
+.install__link {
+  cursor: pointer;
+  display: block;
 }
 
-.install__description {
+.install__link--ios {
+  width: 47px;
+  height: 57px;
+}
+
+.install__link--android {
+  width: 43px;
+  height: 48px;
+}
+
+.install__link--windows {
+  width: 44px;
+  height: 42px;
+}
+
+.install__text {
+  width: 235px;
+  margin: 0 auto;
+  margin-top: 20px;
+  color: #ffffff;
   font-size: 14px;
   line-height: 24px;
+  font-weight: 300;
+  text-align: center;
+}
+
+@media (min-width: @tablet-width) {
+  .install {
+    background: url("../img/iphone-hand-tablet@1x.png") 50% 100%, url("../img/bg-back-tablet@1x.jpg") 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 700px 545px, cover;
+    min-height: 729px;
+    margin-top: -110px;
+    padding: 202px 20px 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/iphone-hand-tablet@2x.png") 50% 100%, url("../img/bg-back-tablet@2x.jpg") 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 700px 545px, cover;
+    }
+  }
+
+  .install__wrap {
+    .wrap-tablet;
+  }
+
+  .install__title {
+    display: block;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 300;
+    width: 190px;
+    text-align: center;
+    margin: 0 0 29px 54px;
+  }
+
+  .install__button {
+    width: 300px;
+    margin: 0;
+  }
+
+  .install__list {
+    margin: 45px 0 38px 45px;
+  }
+
+  .install__text {
+    width: 300px;
+    font-size: 18px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .install {
+    background: url("../img/iphone-hand-desktop@1x.png") 97% 100%, url("../img/bg-back-desktop@1x.jpg") 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 1050px 645px, cover;
+    padding: 0;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background: url("../img/iphone-hand-desktop@2x.png") 97% 100%, url("../img/bg-back-desktop@2x.jpg") 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 1050px 645px, cover;
+    }
+  }
+
+  .install__wrap {
+    .wrap-desktop;
+    padding: 219px 10px 122px;
+  }
+
+  .install__title {
+    font-size: 50px;
+    line-height: 60px;
+    width: 235px;
+    margin: 0 0 50px 32px;
+  }
+
+  .install__button {
+    font-size: 21px;
+  }
+
+  .install__list {
+    margin: 65px 0 58px 46px;
+  }
 }
