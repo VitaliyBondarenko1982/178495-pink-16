@@ -8,6 +8,7 @@
     <link rel="preload" href="fonts/opensans.woff2" as="font">
     <link rel="preload" href="fonts/opensansbold.woff2" as="font">
     <link rel="preload" href="fonts/opensanslight.woff2" as="font">
+    <script src="js/picturefill.js"></script>
   </head>
 
   <body>
@@ -129,84 +130,241 @@
             </div>
         </section>
 
-      <section class="reviews">
-        <div class="reviews__wrapper container slider">
-          <h2 class="visually-hidden">Отзывы пользователей</h2>
-          <ul class="reviews__list slider__list">
-            <li class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-            <li class="reviews__item slider__item">
-              <cite class="reviews__author-name"></cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в коммент</p>
-            </li>
-            <li class="reviews__item slider__item">
-              <cite class="reviews__author-name">Николай Петров</cite>
-              <p class="reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-            </li>
-          </ul>
-          <p class="reviews__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
-        </div>
+        <section class="science">
+            <div class="science__wrap">
+                <h2 class="science__title"> Эффект <br>на 24 часа! </h2>
+                <p class="science__text"> Британские ученые провели исследования и доказали,
+                    <br class="science__desktop-br"> что положительный эффект
+                    <br class="science__tablet-br"> от использования приложения длится целые сутки! </p>
+                <a class="science__link"> Узнать больше об исследовании </a>
+            </div>
+        </section>
+
+      <section class="review">
+        <h2 class="visually-hidden"> Отзывы </h2>
+            <div class="review__wrap">
+                <input class="visually-hidden review__button-1" id="review-btn-1" type="radio" name="review-switch" checked="">
+                <input class="visually-hidden review__button-2" id="review-btn-2" type="radio" name="review-switch">
+                <input class="visually-hidden review__button-3" id="review-btn-3" type="radio" name="review-switch">
+                <div class="review__controls">
+                    <label for="review-btn-1" class="review__label-1"> </label>
+                    <label for="review-btn-2" class="review__label-2"></label>
+                    <label for="review-btn-3" class="review__label-3"></label>
+                </div>
+
+                <button class="review__toggle-left">
+                    <span class="visually-hidden">Назад</span>
+                    <svg class="review__toogle-icon" width="22" height="41">
+                        <use xlink:href="#icon-review-arrow-left"></use>
+                    </svg>
+                </button>
+                <button class="review__toggle-right">
+                    <span class="visually-hidden">Вперед</span>
+                    <svg class="review__toogle-icon" width="22" height="41">
+                        <use xlink:href="#icon-review-arrow-right"></use>
+                    </svg>
+                </button>
+
+                <ul class="review__list">
+                    <li class="review__item review__item--1">
+                        <h3 class="review__title"> Николай Петров </h3>
+                        <p class="review__content"> «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» </p>
+                        <h3 class="review__title-tablet"> Николай Петров
+                          <span class="review__title-about"> 25 лет, водитель трамвая </span>
+                        </h3>
+
+                    </li>
+                    <li class="review__item review__item--2">
+                        <h3 class="review__title"> Алексей Сидоров </h3>
+                        <p class="review__content"> А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! </p>
+                        <h3 class="review__title-tablet"> Алексей Сидоров
+                          <span class="review__title-about"> 99 лет, водитель автобуса </span>
+                        </h3>
+                    </li>
+                    <li class="review__item review__item--3">
+                        <h3 class="review__title"> Петр Иванов </h3>
+                        <p class="review__content"> «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!» </p>
+                        <h3 class="review__title-tablet"> Петр Иванов
+                          <span class="review__title-about"> 45 лет, сантехник </span>
+                        </h3>
+                    </li>
+                </ul>
+            </div>
       </section>
 
       <section class="price">
-        <div class="price__wrapper slider">
-          <h2 class="visually-hidden">Наши цены</h2>
-          <ul class="price__list slider__list">
-            <li class="price__item price__item--base slider__item">
-              <h3 class="price__title">База</h3>
-              <p class="price__value">1,99 usd</p>
-              <p class="price__option price__option--filter">Розовый фильтр</p>
-              <p class="price__option price__option--smile">Смайлики</p>
-              <p class="price__option price__option--comments">Комментарии</p>
-            </li>
-            <li class="price__item price__item--standart slider__item">
-              <h3 class="price__title">Cтандарт</h3>
-              <p class="price__value">3,99 usd</p>
-              <p class="price__option price__option--filter">Розовый фильтр</p>
-              <p class="price__option price__option--smile">Смайлики</p>
-              <p class="price__option price__option--comments">Комментарии</p>
-            </li>
-            <li class="price__item price__item--unlim slider__item">
-              <h3 class="price__title">Анлим</h3>
-              <p class="price__value">9,99 usd</p>
-              <p class="price__option price__option--filter">Розовый фильтр</p>
-              <p class="price__option price__option--smile">Смайлики</p>
-              <p class="price__option price__option--comments">Комментарии</p>
-            </li>
-          </ul>
-          <p class="price__toggles slider__toggles">
-            <button class="slider__toggle" type="button">1</button>
-            <button class="slider__toggle" type="button">2</button>
-            <button class="slider__toggle" type="button">3</button>
-          </p>
-        </div>
+        <h2 class="visually-hidden"> Тарифы </h2>
+            <div class="price__wrap">
+                <input class="visually-hidden price__button-1" type="radio" id="price-btn-1" name="toggled">
+                <input class="visually-hidden price__button-2" type="radio" id="price-btn-2" name="toggled" checked="">
+                <input class="visually-hidden price__button-3" type="radio" id="price-btn-3" name="toggled">
+                <div class="price__controls">
+                    <label for="price-btn-1" class="price__label-1"></label>
+                    <label for="price-btn-2" class="price__label-2"></label>
+                    <label for="price-btn-3" class="price__label-3"></label>
+                </div>
+                <table class="price__list">
+                    <tbody>
+                        <tr class="price__list-header">
+                            <th class="price__first-cols"> </th>
+                            <th class="price__item-header"> <span class="price__name"> База </span>
+                                <span class="price__cost"> 1,99 USD </span>
+                            </th>
+                            <th class="price__item-header"> <span class="price__name"> Стандарт </span>
+                                <span class="price__cost"> 3,99 USD </span>
+                                <div class="price__flag-hit"> <span> Хит </span> </div>
+                            </th>
+                            <th class="price__item-header"> <span class="price__name"> Анлим </span>
+                                <span class="price__cost"> 9,99 USD </span>
+                            </th>
+                        </tr>
+                        <tr class="price__list-row">
+                            <td class="price__cols price__cols--hidden"> <span class="price__option"> Розовый фильтр </span>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Розовый фильтр </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Розовый фильтр </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Розовый фильтр </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="price__list-row">
+                            <td class="price__cols price__cols--hidden"> <span class="price__option"> Смайлики </span>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Смайлики </span>
+                                    <span class="price__icon-cancel"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Смайлики </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Смайлики </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="price__list-row">
+                            <td class="price__cols price__cols--hidden"> <span class="price__option"> Комментарии </span>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Комментарии  </span>
+                                    <span class="price__icon-cancel"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Комментарии  </span>
+                                    <span class="price__icon-cancel"> </span>
+                                </div>
+                            </td>
+                            <td class="price__cols">
+                                <div class="price__cols-wrap">
+                                    <span class="price__option-mobile"> Комментарии  </span>
+                                    <span class="price__icon-ok"> </span>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
       </section>
     </main>
 
-    <footer class="page-footer">
-      <div class="page-footer__wrapper">
-      <h1 class="page-footer__title">Остались вопросы? Свяжитесь с нами!</h1>
-        <div class="page-footer__phone">
-          <p class="page-footer__phone-title">Звоните:</p>
-          <p class="page-footer__phone-number">+7 (812) 555-66-66</p>
-        </div>
-        <div class="page-footer__email">
-          <p class="page-footer__email-title">Пишите:</p>
-          <p class="page-footer__email-address">mail@htmlacademy.ru</p>
-        </div>
-        <div class="page-footer__address">
-          <p class="page-footer__address-title">Приезжайте в гости:</p>
-          <p class="page-footer__address-place">ул. Большая Конюшенная, 19/8</p>
-        </div>
-      </div>
-      <img class="page-footer__map" src="img/bg-map-mobile@1x.png" width="320" height="200" alt="Карта проезда">
+    <section class="contacts">
+            <div class="contacts__wrap">
+                <h2 class="contacts__title"> Остались вопросы? Свяжитесь с нами!</h2>
+                <ul class="contacts__list">
+                    <li class="contacts__item contacts__item--phone">
+                        <h3 class="contacts__text"> Звоните: </h3>
+                        <p class="contacts__phone"> +7 (812) 555-66-66 </p>
+                    </li>
+                    <li class="contacts__item contacts__item--mail">
+                        <h3 class="contacts__text"> Пишите </h3>
+                        <p class="contacts__mail"> mail@htmlacademy.ru </p>
+                    </li>
+                    <li class="contacts__item contacts__item--adress">
+                        <h3 class="contacts__text"> Приезжайте в гости: </h3>
+                        <p class="contacts__adress"> ул. Большая Конюшенная, 19/8 </p>
+                    </li>
+                </ul>
+            </div>
+            <div class="contacts__block-map">
+                <div class="contacts__google-map" id="map"> </div>
+
+                <script>
+                    function initMap() {
+                        var centerMap = {
+                            lat: 59.938875,
+                            lng: 30.322976
+                        }
+                        var map = new google.maps.Map(document.getElementById('map'), {
+                            zoom: 16,
+                            center: centerMap
+                        });
+
+                        var image = 'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png';
+                        var beachMarker = new google.maps.Marker({
+                            position: centerMap,
+                            map: map,
+                            icon: "img/map-marker.png"
+                        });
+                    }
+                </script>
+
+                <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCiOONQwqGWTeUqxXZdCBxeVAY2zboW148&callback=initMap" async="" defer=""></script>
+
+            </div>
+        </section>
+    </main>
+    <footer class="page-footer page-footer--index">
+        <a class="page-footer__logo-link">
+            <svg class="page-footer__logo" width="150" height="40">
+                <use xlink:href="#logo-pink-blue-mobile"></use>
+            </svg>
+            <svg class="page-footer__logo-desktop" width="150" height="40">
+                <use xlink:href="#logo-pink-blue-desktop"></use>
+            </svg>
+        </a>
+        <ul class="social">
+            <li class="social__item">
+                <a class="social__link social__link--twitter" href="#"> <img src="img/icon-twitter.svg" alt="Логотип Twitter"> <span class="visually-hidden">Твитер</span> </a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link--facebook" href="#"> <img src="img/icon-facebook.svg" alt="Логотип Facebook"> <span class="visually-hidden">Фейсбук</span> </a>
+            </li>
+            <li class="social__item">
+                <a class="social__link social__link--youtube" href="#"> <img src="img/icon-youtube.svg" alt="Логотип Youtube"> <span class="visually-hidden">Youtube</span> </a>
+            </li>
+        </ul>
+        <p class="page-footer__develop"> Разработано
+            <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">
+                <span class="visually-hidden">HTML Academy</span>
+                <svg class="page-footer__icon" width="27" height="34">
+                    <use xlink:href="#logo-htmlacademy"></use>
+                </svg>
+            </a>
+        </p>
     </footer>
-<script src="js/menu.js"></script>
+<script src="js/script.js"></script>
   </body>
 </html>

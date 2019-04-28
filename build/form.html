@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <div class="page-header__container container">
+        <!--при отсутствии js остается установлен класс main-nav--nojs (меню в мобильной версии по умолчанию открыто, кнопки, работающие на js, скрыты) класс main-nav--nojs при наличии js будет удален классы main-nav--closed и main-nav--opened переключают состояние меню и внешний вид кнопки при наличии js-->
+      <div class="page-header__logo">
+        <a href="#">
+          <img class="page-header__logo-image" src="img/logo-pink-white-mobile.svg" width="75" height="23" alt="Логотип Pink">
+        </a>
+      </div>
+      <nav class="main-nav main-nav--closed main-nav--nojs">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item site-list__item--active">
+              <a>Главная</a>
+            </li>
+            <li class="site-list__item">
+              <a href="photo.html">Фотографии</a>
+            </li>
+            <li class="site-list__item">
+              <a href="form.html">Конкурс</a>
+            </li>
+            <li class="site-list__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    </header>
+
+    <main>
+      <section class="banner">
+        <img class="banner__image" src="img/bg-back-mobile@1x.jpg" width="320" height="171" alt="Фоновое изображение">
+        <h1 class="banner__text">Конкурс на самое безбашенное путешествие с Пинк</h1>
+      </section>
+
+      <section class="slogan">
+        <div class="container">
+        <h2 class="slogan__text">
+          Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+        </h2>
+        </div>
+      </section>
+      <form class="feedback" method="get" action="https://echo.htmlacademy.ru">
+
+        <section class="name feedback__name">
+          <div class="container">
+          <div class="name__wrapper">
+            <h2 class="visually-hidden">Представьтесь:</h2>
+            <label class="name__item name__item--name" for="name">
+              <input class="name__field name__field--name" id="name" type="text" name="name" placeholder="Укажите фамилию *" required="">
+              <span class="name__text name__text--name">Фамилия:</span>
+            </label>
+            <label class="name__item name__item--surname" for="surname">
+                <input class="name__field" id="surname" type="text" name="surname" placeholder="Введите ваше имя *" required="">
+                <span class="name__text">Имя:</span>
+                </label>
+              <label class="name__item" for="middle-name">
+                <input class="name__field" id="middle-name" type="text" name="middle-name" placeholder="Ну и отчество тоже">
+                <span class="name__text">Отчество:</span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="achievements feedback__achievements">
+          <div class="container">
+          <div class="achievements__wrapper">
+            <h2 class="achievements__title">Ваши безбашенные достижения в путешествии</h2>
+            <label class="achievements__item achievements__item--shark" for="achievements-shark">
+              <input class="achievements__field" type="checkbox" name="achievements-shark" id="achievements-shark" value="shark" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Сделал селфи с акулой</span>
+            </label>
+            <label class="achievements__item achievements__item--beach" for="achievements-beach">
+              <input class="achievements__field" type="checkbox" name="achievements-beach" id="achievements-beach" value="beach" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Обгорел на пляже</span>
+            </label>
+            <label class="achievements__item achievements__item--chak" for="achievements-chak">
+              <input class="achievements__field" type="checkbox" name="achievements-chak" id="achievements-chak" value="chak" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Видел Чака Норриса</span>
+            </label>
+            <label class="achievements__item achievements__item--souvenir" for="achievements-souvenir">
+              <input class="achievements__field" type="checkbox" name="achievements-souvenir" id="achievements-souvenir" value="souvenir" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Накупил сувениров</span>
+            </label>
+            <label class="achievements__item achievements__item--tower" for="achievements-tower">
+              <input class="achievements__field" type="checkbox" name="achievements-tower" id="achievements-tower" value="tower" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Удержал башню</span>
+            </label>
+            <label class="achievements__item achievements__item--hotel" for="achievements-hotel">
+              <input class="achievements__field" type="checkbox" name="achievements-hotel" id="achievements-hotel" value="hotel" checked="">
+              <svg class="achievements__icon" width="27" height="34"></svg>
+              <span class="achievements__text">Разгромил отель</span>
+            </label>
+          </div>
+        </div>
+        </section>
+
+        <section class="contacts feedback__contacts">
+          <div class="container">
+          <div class="contacts__wrapper">
+            <h2 class="visually-hidden">Контактная информация:</h2>
+            <label class="contacts__item contacts__item--tel" for="tel">
+              <input class="contacts__field" type="tel" name="tel" id="tel" placeholder="Введите телефон" required="">
+              <span class="contacts__text contacts__text--tel">Контактный телефон*:</span>
+            </label>
+            <label class="contacts__item contacts__item--email" for="email">
+              <input class="contacts__field contacts__field--email" type="email" name="email" id="email" placeholder="Введите e-mail" required="">
+              <span class="contacts__text contacts__text--email">Электронная почта*:</span>
+            </label>
+          </div>
+        </div>
+        </section>
+
+        <section class="app feedback__app">
+          <div class="container">
+          <div class="app__wrapper">
+            <h2 class="app__title">С каким приложением путешествовали?</h2>
+            <label class="app__item" for="app-ios">
+              <input class="app__field app__field--ios" type="radio" name="app" id="app-ios" value="ios" checked="">
+              <span class="app__text">Pink для iOS</span>
+            </label>
+            <label class="app__item app__item--android" for="app-android">
+              <input class="app__field app__field--android" type="radio" name="app" id="app-android" value="android">
+              <span class="app__text">Pink на Android</span>
+            </label>
+            <label class="app__item app__item--windows" for="app-windows">
+              <input class="app__field app__field--windows" type="radio" name="app" id="app-windows" value="windows">
+              <span class="app__text">Windows Phone</span>
+            </label>
+          </div>
+        </div>
+        </section>
+
+        <section class="response feedback__response">
+          <div class="container">
+            <div class="response__wrapper">
+              <h2 class="response__title">Опишите свои эмоции</h2>
+              <label class="response__item" for="text-of-feedback">
+                <textarea class="response__text" id="text-of-feedback" name="text-of-feedback" rows="5" cols="20" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <section class="button-form feedback__button-form">
+            <div class="button-form__wrapper">
+              <button type="submit" class="button-form__button button__feedback">Отправить форму</button>
+              <span class="button-form__required">* &#8212; Обязательные поля</span>
+            </div>
+        </section>
+      </form>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo">
+          <img src="img/logo-pink-blue-mobile.svg" width="150" height="100" alt="Логотип Pink">
+        </div>
+        <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--twitter" href="">
+                  <svg class="social__icon-twitter" width="17" height="15"></svg>
+                  <span class="visually-hidden">Pink в Твиттере</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="">
+                  <svg class="social__icon-facebook" width="9" height="19"></svg>
+                  <span class="visually-hidden">Pink в Фейсбуке</span>
+                </a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--youtube" href="">
+                  <svg class="social__icon-youtube" width="20" height="14"></svg>
+                  <span class="visually-hidden">Pink на Youtube</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <b class="copyright__text copyright__text--photo">Разработано</b>
+            <a class="copyright__link copyright__link--photo" href="https://htmlacademy.ru/intensive/adaptive">
+              <svg class="copyright__icon copyright__icon--photo" width="27" height="34"></svg>
+              <span class="visually-hidden">HTML Academy</span>
+            </a>
+          </div>
+      </div>
+    </footer>
+<script src="js/menu.js"></script>
+
+  </body>
+</html>
